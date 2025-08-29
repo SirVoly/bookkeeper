@@ -18,18 +18,19 @@ var createCmd = &cobra.Command{
 The command defaults to adding a book,
 but this can by changed with the --type (-t) flag.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		var handler handlers.Handler
 		switch createType {
 		case "book", "books":
-			err := handlers.CreateBookHandler(args)
-			if err != nil {
-				log.Fatalf("error in command create: %v", err)
-			}
-			return
+			handler = handlers.CreateBookHandler
 		case "author", "authors":
 			fmt.Println("Create author not yet implemented.")
 			return
 		default:
 			log.Fatalf("unknown type: %s", createType)
+		}
+		err := handler(args)
+		if err != nil {
+			log.Fatalf("error in command create: %v", err)
 		}
 	},
 }

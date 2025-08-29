@@ -18,18 +18,19 @@ var listCmd = &cobra.Command{
 The command defaults to listing all books,
 but this can be changed with the --type (-t) flag.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		var handler handlers.Handler
 		switch listType {
 		case "book", "books":
-			err := handlers.ListBooksHandler(args)
-			if err != nil {
-				log.Fatalf("error in command create: %v", err)
-			}
-			return
+			handler = handlers.ListBooksHandler
 		case "author", "authors":
 			fmt.Println("List authors not yet implemented.")
 			return
 		default:
 			log.Fatalf("unknown type: %s", listType)
+		}
+		err := handler(args)
+		if err != nil {
+			log.Fatalf("error in command create: %v", err)
 		}
 	},
 }
