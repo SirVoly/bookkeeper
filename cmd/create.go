@@ -26,11 +26,11 @@ but this can by changed with the --type (-t) flag.`,
 			fmt.Println("Create author not yet implemented.")
 			return
 		default:
-			log.Fatalf("unknown type: %s", createType)
+			log.Fatalf("unknown type: %s\n", createType)
 		}
 		err := handler(args)
 		if err != nil {
-			log.Fatalf("error in command create: %v", err)
+			log.Fatalf("error in command create: %v\n", err)
 		}
 	},
 }

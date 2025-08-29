@@ -17,7 +17,7 @@ func ListBooksHandler(_ []string) error {
 		return fmt.Errorf("error listing books: %v", err)
 	}
 	for _, book := range books {
-		fmt.Printf("%s\n\n", book.Print())
+		fmt.Printf("- %s\n", book.Print())
 	}
 	return nil
 }

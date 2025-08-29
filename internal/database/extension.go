@@ -17,8 +17,8 @@ func (b Book) Print() string {
 	}
 
 	return fmt.Sprintf(`%s
-ISBN: %s
-Publication Date: %s
-Pages: %s`,
+	ISBN: %s
+	Publication Date: %s
+	Pages: %s`,
 		b.Title, strconv.FormatInt(b.Isbn, 10), pubDate, nPages)
 }
