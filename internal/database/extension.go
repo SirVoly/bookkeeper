@@ -20,5 +20,5 @@ func (b Book) Print() string {
 ISBN: %s
 Publication Date: %s
 Pages: %s`,
-		b.Title, b.ID, pubDate, nPages)
+		b.Title, strconv.FormatInt(b.Isbn, 10), pubDate, nPages)
 }
