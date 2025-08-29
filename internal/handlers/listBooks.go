@@ -8,11 +8,11 @@ import (
 )
 
 func ListBooksHandler(_ []string) error {
-	queries, err := database.InitDatabase()
+	queries, err := database.InitQueries()
 	if err != nil {
 		return fmt.Errorf("error getting database: %v", err)
 	}
-	books,err := queries.ListBooks(context.Background())
+	books, err := queries.ListBooks(context.Background())
 	if err != nil {
 		return fmt.Errorf("error listing books: %v", err)
 	}

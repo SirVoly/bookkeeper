@@ -15,8 +15,8 @@ func CreateBookHandler(_ []string) error {
 	if err := promptUser(&bookParams); err != nil {
 		return fmt.Errorf("error prompting user: %v", err)
 	}
-	
-	book, err := insertBook(bookParams); 
+
+	book, err := insertBook(bookParams)
 	if err != nil {
 		return fmt.Errorf("error inserting book: %v", err)
 	}
@@ -48,7 +48,7 @@ func promptUser(book *database.CreateBookParams) error {
 }
 
 func insertBook(book database.CreateBookParams) (database.Book, error) {
-	queries, err := database.InitDatabase()
+	queries, err := database.InitQueries()
 	if err != nil {
 		return database.Book{}, fmt.Errorf("error getting database: %v", err)
 	}

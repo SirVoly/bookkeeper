@@ -8,7 +8,7 @@ import (
 )
 
 func DeleteDatabase(_ []string) error {
-	queries, err := database.InitDatabase()
+	queries, err := database.InitQueries()
 	if err != nil {
 		return fmt.Errorf("error getting database: %v", err)
 	}
