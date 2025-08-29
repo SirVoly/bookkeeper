@@ -6,12 +6,12 @@ import (
 )
 
 func (b Book) Print() string {
-	pubDate := "Unkown"
+	pubDate := "Unknown"
 	if b.PublicationDate.Valid {
 		pubDate = b.PublicationDate.String
 	}
 
-	nPages := "Unkown"
+	nPages := "Unknown"
 	if b.NumberOfPages.Valid {
 		nPages = strconv.FormatInt(b.NumberOfPages.Int64, 10)
 	}

@@ -9,11 +9,14 @@ require (
 	modernc.org/sqlite v1.38.2
 )
 
+require github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e // indirect
+
 require (
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.8.0 // indirect
 	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/manifoldco/promptui v0.9.0
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/ncruces/go-strftime v0.1.9 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.3 // indirect
