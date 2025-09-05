@@ -1,8 +1,6 @@
 -- name: CreateBook :one
 INSERT INTO books (id, title, isbn, publication_date, number_of_pages)
-VALUES (
-    ?, ?, ?, ?, ?
-)
+VALUES (?, ?, ?, ?, ?)
 RETURNING *;
 
 -- name: ListBooks :many

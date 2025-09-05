@@ -12,9 +12,7 @@ import (
 
 const createBook = `-- name: CreateBook :one
 INSERT INTO books (id, title, isbn, publication_date, number_of_pages)
-VALUES (
-    ?, ?, ?, ?, ?
-)
+VALUES (?, ?, ?, ?, ?)
 RETURNING id, title, isbn, publication_date, number_of_pages
 `
 

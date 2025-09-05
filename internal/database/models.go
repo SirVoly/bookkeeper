@@ -15,3 +15,13 @@ type Book struct {
 	PublicationDate sql.NullString
 	NumberOfPages   sql.NullInt64
 }
+
+type BookTag struct {
+	BookID string
+	TagID  string
+}
+
+type Tag struct {
+	ID   string
+	Name string
+}
