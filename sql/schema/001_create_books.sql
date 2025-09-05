@@ -7,6 +7,5 @@ CREATE TABLE books (
     number_of_pages INTEGER
 );
 
-
 -- +goose Down
 DROP TABLE books;

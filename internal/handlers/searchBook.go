@@ -26,7 +26,6 @@ func SearchBookHandler(params map[string]interface{}) error {
 		conditions = append(conditions, fmt.Sprintf("isbn = $%d", len(args)+1))
 		args = append(args, isbn)
 	}
-	// Add more fields as needed...
 
 	query := baseQuery
 	if len(conditions) > 0 {
